@@ -1,7 +1,0 @@
-{
-  "rules": [{
-    "satarget": "app",
-    "action": "allow",
-    "page": "*"
-  }]
-}
