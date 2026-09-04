@@ -1,0 +1,60 @@
+<view class="container">
+  <!-- 顶部统计卡 -->
+  <view class="card hero">
+    <view class="hero-grid">
+      <view class="hero-item">
+        <view class="hero-num">{{streak}}</view>
+        <view class="hero-label">连续打卡🔥</view>
+      </view>
+      <view class="hero-item">
+        <view class="hero-num">{{totalDays}}</view>
+        <view class="hero-label">累计天数</view>
+      </view>
+      <view class="hero-item">
+        <view class="hero-num">{{avgRate}}%</view>
+        <view class="hero-label">平均完成率</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 今日进度 -->
+  <view class="card">
+    <view class="section-title">今日进度</view>
+    <view class="today-bar-wrap">
+      <view class="today-bar" style="width: {{todayCount / todayTotal * 100}}%"></view>
+    </view>
+    <view class="today-text">{{todayCount}}/{{todayTotal}} 项完成</view>
+  </view>
+
+  <!-- 近7天完成率柱状图 -->
+  <view class="card">
+    <view class="section-title">近7天完成率</view>
+    <view class="chart">
+      <view class="bar-item" wx:for="{{chartData}}" wx:key="day">
+        <view class="bar-col">
+          <view class="bar-fill" style="height: {{item.percent}}%"></view>
+          <view class="bar-num">{{item.count}}</view>
+        </view>
+        <view class="bar-day">{{item.day}}</view>
+      </view>
+    </view>
+    <view class="chart-note">柱子越高 = 当天完成越多 💪</view>
+  </view>
+
+  <!-- 气血恢复小提示 -->
+  <view class="card tip-card">
+    <view class="section-title">🌿 你的恢复节奏</view>
+    <view class="tip-text" wx:if="{{streak < 3}}">
+      刚开始最难，能坚持3天就是胜利。气血恢复是慢功夫，别急 🌸
+    </view>
+    <view class="tip-text" wx:elif="{{streak < 7}}">
+      不错！连续 {{streak}} 天了，皮肤已经在悄悄变好，继续 ✨
+    </view>
+    <view class="tip-text" wx:elif="{{streak < 21}}">
+      太棒了，连续 {{streak}} 天！28天皮肤一个代谢周期，你快过半了 🌟
+    </view>
+    <view class="tip-text" wx:else="">
+      连续 {{streak}} 天！习惯已经扎根，你正在成为更好的自己 🎉
+    </view>
+  </view>
+</view>

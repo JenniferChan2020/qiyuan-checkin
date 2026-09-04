@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="title">🏃 一周运动计划</view>
+  <view class="subtitle">有氧 + 力量 + 休息 + 瑜伽，不用想"练啥"跟着做</view>
+
+  <scroll-view scroll-x class="day-scroll">
+    <view
+      wx:for="{{sports}}" wx:key="day"
+      class="day-tab {{activeDay === index ? 'day-active' : ''}}"
+      bindtap="switchDay"
+      data-idx="{{index}}"
+    >
+      <text class="day-emoji">{{item.emoji}}</text>
+      <text class="day-name">{{item.day}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="card" wx:for="{{[sports[activeDay]]}}" wx:key="day">
+    <view class="detail-header">
+      <text class="detail-day">{{item.day}} {{item.emoji}}</text>
+      <view class="type-tag">{{item.type}}</view>
+    </view>
+    <view class="detail-desc">{{item.desc}}</view>
+    <view class="detail-meta">⏱ {{item.duration}}</view>
+
+    <view class="phase">
+      <view class="phase-title">🔥 热身</view>
+      <view class="phase-item" wx:for="{{item.warmup}}" wx:for-item="w">{{w}}</view>
+    </view>
+    <view class="phase">
+      <view class="phase-title">💪 正式训练</view>
+      <view class="phase-item" wx:for="{{item.main}}" wx:for-item="m">{{m}}</view>
+    </view>
+    <view class="phase">
+      <view class="phase-title">🧊 拉伸放松</view>
+      <view class="phase-item" wx:for="{{item.stretch}}" wx:for-item="s">{{s}}</view>
+    </view>
+
+    <view class="tip">💡 运动后30分钟内补充蛋白质（鸡蛋/牛奶/希腊酸奶），是皮肤修复的黄金窗口</view>
+  </view>
+</view>

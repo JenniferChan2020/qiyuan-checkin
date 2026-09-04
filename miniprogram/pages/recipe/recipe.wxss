@@ -1,0 +1,83 @@
+.day-scroll {
+  white-space: nowrap;
+  margin-bottom: 24rpx;
+}
+.day-tab {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx 28rpx;
+  margin-right: 16rpx;
+  min-width: 110rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.03);
+}
+.day-active {
+  background: var(--green);
+  color: #fff;
+}
+.day-emoji { font-size: 36rpx; }
+.day-name { font-size: 26rpx; margin-top: 6rpx; }
+
+.day-detail {
+  padding: 32rpx;
+}
+.detail-header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 24rpx;
+}
+.detail-day {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: var(--text);
+  margin-right: 16rpx;
+}
+.detail-theme {
+  font-size: 26rpx;
+  color: var(--pink);
+  background: #FBEAEA;
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.meal {
+  margin-bottom: 24rpx;
+}
+.meal-label {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: var(--green-dark);
+  margin-bottom: 8rpx;
+}
+.meal-text {
+  font-size: 28rpx;
+  color: var(--text);
+  line-height: 1.6;
+  padding-left: 8rpx;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+.tag {
+  background: #EAF3EE;
+  color: var(--green-dark);
+  font-size: 26rpx;
+  padding: 12rpx 24rpx;
+  border-radius: 30rpx;
+}
+.tag-red {
+  background: #FBEAEA;
+  color: var(--pink);
+  font-weight: bold;
+}
+.tip {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: var(--text-sub);
+  line-height: 1.5;
+}

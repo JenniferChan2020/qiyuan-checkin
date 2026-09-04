@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/today/today",
+    "pages/recipe/recipe",
+    "pages/sport/sport",
+    "pages/qiqi/qiqi",
+    "pages/stats/stats"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#6B8E7B",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "元气修复",
+    "backgroundColor": "#F5F0EB"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#6B8E7B",
+    "backgroundColor": "#fff",
+    "list": [
+      { "pagePath": "pages/today/today", "text": "今日打卡" },
+      { "pagePath": "pages/recipe/recipe", "text": "食谱" },
+      { "pagePath": "pages/sport/sport", "text": "运动" },
+      { "pagePath": "pages/qiqi/qiqi", "text": "气血专项" },
+      { "pagePath": "pages/stats/stats", "text": "统计" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
